@@ -1,0 +1,79 @@
+NAME: AKSHAY SUNIL KADAM
+ROLL NO:200240320015
+ASSIGNMENT NO-1
+
+create database company;
+use company;
+
+create table salespeople(
+snum int(4),
+sname varchar(10),
+city varchar(10),
+comm float(3,2)
+);
+
+
+create table customer(
+cnum int(4),
+cname varchar(10),
+city varchar(10),
+rating int(4),
+snum int(4)
+);
+
+
+create table orders(
+onum int(4),
+amt float(7,2),
+odate date,
+cnum int(4),
+snum int(4)
+);
+use company;
+
+insert into salespeople(snum,sname,city,comm)values
+(1001,'peel','london',.12),
+(1002,'serres','san_jose',.13),
+(1004,'monika','london',.11),
+(1007,'rifkin','barcelona',.15),
+(1003,'axelrod','newyork',.10);
+
+
+insert into customer(cnum,cname,city,rating,snum)values
+(2001,'hoffman','london',100,1007),
+(2002,'giovanni','rome',200,1003),
+(2003,'liu','san jose',200,1002),
+(2004,'grass','berlin',300,1002),
+(2006,'clemens','london',100,1001),
+(2008,'cisneros','san_jose',300,1007),
+(2007,'pereira','rome',100,1004);
+
+insert into orders(onum,amt,odate,cnum,snum)values
+(3001,18.69,STR_TO_DATE('03-oct-1990','%d-%b-%Y'),2008,1007),
+(3003,767.19,STR_TO_DATE('03-oct-1990','%d-%b-%Y'),2001,1001),
+(3002,1900.10,STR_TO_DATE('03-oct-1990','%d-%b-%Y'),2007,1004),
+(3005,5160.45,STR_TO_DATE('03-oct-1990','%d-%b-%Y'),2003,1002),
+(3006,1098.16,STR_TO_DATE('03-oct-1990','%d-%b-%Y'),2008,1007),
+(3009,1713.23,STR_TO_DATE('03-oct-1990','%d-%b-%Y'),2002,1003),
+(3007,75.75,STR_TO_DATE('03-oct-1990','%d-%b-%Y'),2004,1002),
+(3008,4723.00,STR_TO_DATE('03-oct-1990','%d-%b-%Y'),2006,1001),
+(3010,1309.95,STR_TO_DATE('03-oct-1990','%d-%b-%Y'),2004,1002),
+(3011,9891.88,STR_TO_DATE('03-oct-1990','%d-%b-%Y'),2006,1001);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
